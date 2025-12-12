@@ -127,8 +127,8 @@ app.post('/api/adduser', async function (req, res) {
     }
 });
 
-
-app.listen(8000, ()=>{
+const PORT=process.env.DB_PORT
+app.listen(PORT, ()=>{
     console.log("Server running on port 8000...");
 })
 
