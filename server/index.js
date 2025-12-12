@@ -127,9 +127,9 @@ app.post('/api/adduser', async function (req, res) {
     }
 });
 
-const PORT=process.env.DB_PORT
+const PORT=process.env.DB_PORT || 4000
 app.listen(PORT, ()=>{
-    console.log("Server running on port 8000...");
+    console.log(`Server running on port ${PORT}`);
 })
 
 // TO START -> npm start
