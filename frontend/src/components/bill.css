@@ -1,0 +1,51 @@
+.bill-page {
+    padding: 30px;
+    
+}
+
+.bill-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.bill-card {
+  display: flex;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  gap: 20px;
+}
+
+.bill-card img {
+  width: 120px;
+  height: auto;
+}
+
+.info h2 {
+  margin: 0;
+}
+
+.grand-total {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.back-btn {
+  background: #086f20;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+}
+.prodcolor{
+  color: #f11808;
+}
+#checkout{
+    background: rgb(243, 16, 50);
+}
