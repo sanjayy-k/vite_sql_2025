@@ -13,7 +13,7 @@ const Signup = () => {
   async function getUser() {
     alert("Sign Up First")
     try {
-      const res = await fetch('http://localhost:8000/api/inventory'); 
+      const res = await fetch('https://vitesql2025-production.up.railway.app/api/inventory'); 
       const data = await res.json();
         // console.log(data);
         // for(let i=0; i<data.length; i++){
@@ -35,7 +35,7 @@ getUser();
       }
     try {
       localStorage.setItem("uname",emailId)
-      const res = await fetch('http://localhost:8000/api/adduser', {
+      const res = await fetch('https://vitesql2025-production.up.railway.app/api/adduser', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
