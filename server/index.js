@@ -44,6 +44,11 @@ app.get("/api/inventory",(req,res)=>{            // app.get("/",(req,res)=>{}
     })                                            // res.json("Hello world")
 })
 
+
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
+
 // USERS
 app.get("/api/users",(req,res)=>{                
     const q = "select * from users"
