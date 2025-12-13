@@ -15,13 +15,18 @@ import bodyParser from 'body-parser'
 // reason 3 : save .env in server folder.
 
 const app = express();
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  port: process.env.DB_PORT 
-})
+const url = `mysql://root:YpxbTLpaIYKaQcJanoxSskWPUkkOTMcC@mysql.railway.internal:3306/railway`
+const db = mysql.createConnection(
+ 
+//  {
+//   host: process.env.DB_HOST || 'localhost',
+//   user: process.env.DB_USER,
+//   password: process.env.DB_PASSWORD,
+//   database: process.env.DB_NAME,
+//   port: process.env.DB_PORT || 3306
+// }
+url
+)
 // console.log(process.env.DB_HOST);
 // console.log(process.env.DB_USER);
 
@@ -38,6 +43,11 @@ app.get("/api/inventory",(req,res)=>{            // app.get("/",(req,res)=>{}
         
     })                                            // res.json("Hello world")
 })
+
+
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
 
 // USERS
 app.get("/api/users",(req,res)=>{                
@@ -127,10 +137,12 @@ app.post('/api/adduser', async function (req, res) {
     }
 });
 
+const PORT = process.env.PORT || 4000;
 
-app.listen(8000, ()=>{
-    console.log("Server running on port 8000...");
-})
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 
 // TO START -> npm start
 // THE FIRST STARTING PAGE WILL BE "/"
