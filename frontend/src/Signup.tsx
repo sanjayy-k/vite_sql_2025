@@ -35,7 +35,7 @@ getUser();
       }
     try {
       localStorage.setItem("uname",emailId)
-      const res = await fetch('http://localhost:8000/api/adduser', {
+      const res = await fetch('https://vitesql2025-production.up.railway.app/api/adduser', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
