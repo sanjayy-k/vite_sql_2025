@@ -51,8 +51,8 @@ const Login = () => {
 useEffect(()=>{ 
     async function getUser() {
       try {
-        const res = await fetch('http://localhost:8000/api/users'); 
-         const data = await res.json();
+        // const res = await fetch('http://localhost:8000/api/users'); 
+        //  const data = await res.json();
         //  console.log(data);
       } catch (error) {
         console.log(error);

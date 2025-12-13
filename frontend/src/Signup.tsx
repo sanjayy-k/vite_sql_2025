@@ -12,9 +12,10 @@ const Signup = () => {
   useEffect(()=>{ 
   async function getUser() {
     alert("Sign Up First")
+    // https://vitesql2025-production.up.railway.app
     try {
-      const res = await fetch('http://localhost:8000/api/inventory'); 
-      const data = await res.json();
+      // const res = await fetch('http://localhost:8000/api/inventory'); 
+      // const data = await res.json();
         // console.log(data);
         // for(let i=0; i<data.length; i++){
         // const t = data[i].PRODUCT_NAME
