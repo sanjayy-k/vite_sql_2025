@@ -15,13 +15,18 @@ import bodyParser from 'body-parser'
 // reason 3 : save .env in server folder.
 
 const app = express();
-const db = mysql.createConnection({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  port: process.env.DB_PORT || 3306
-})
+const url = `mysql://root:YpxbTLpaIYKaQcJanoxSskWPUkkOTMcC@mysql.railway.internal:3306/railway`
+const db = mysql.createConnection(
+ 
+//  {
+//   host: process.env.DB_HOST || 'localhost',
+//   user: process.env.DB_USER,
+//   password: process.env.DB_PASSWORD,
+//   database: process.env.DB_NAME,
+//   port: process.env.DB_PORT || 3306
+// }
+url
+)
 // console.log(process.env.DB_HOST);
 // console.log(process.env.DB_USER);
 
