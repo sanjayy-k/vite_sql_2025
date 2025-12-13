@@ -52,7 +52,7 @@ useEffect(()=>{
     async function getUser() {
       try {
         const res = await fetch('https://vitesql2025-production.up.railway.app/api/users'); 
-         const data = await res.json();
+         // const data = await res.json();
         //  console.log(data);
       } catch (error) {
         console.log(error);
