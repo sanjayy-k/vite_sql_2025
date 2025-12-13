@@ -14,7 +14,7 @@ const Signup = () => {
     alert("Sign Up First")
     try {
       const res = await fetch('https://vitesql2025-production.up.railway.app/api/inventory'); 
-      const data = await res.json();
+      // const data = await res.json();
         // console.log(data);
         // for(let i=0; i<data.length; i++){
         // const t = data[i].PRODUCT_NAME
