@@ -21,7 +21,7 @@ function Shoppingcart(){
 
  async function getUser() {
     try {
-      const res = await fetch('https://vitesql2025-production.up.railway.app/api/inventory');
+      const res = await fetch('https://vite-sql-2025.onrender.com/api/inventory');
       const data = await res.json();
       // console.log(data)
       return data;   // IMPORTANT ✔️
