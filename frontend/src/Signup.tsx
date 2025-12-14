@@ -12,7 +12,6 @@ const Signup = () => {
   useEffect(()=>{ 
   async function getUser() {
     alert("Sign Up First")
-    // https://vitesql2025-production.up.railway.app
     try {
       // const data = await res.json();
         // console.log(data);
@@ -35,7 +34,7 @@ getUser();
       }
     try {
       localStorage.setItem("uname",emailId)
-      const res = await fetch('https://vitesql2025-production.up.railway.app/api/adduser', {
+      const res = await fetch('https://vite-sql-2025.onrender.com/api/adduser', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
