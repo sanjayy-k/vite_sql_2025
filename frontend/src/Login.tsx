@@ -18,7 +18,7 @@ const Login = () => {
       }
            localStorage.setItem("uname",userName)
             // console.log(uname)
-            const res = await fetch('https://vitesql2025-production.up.railway.app/api/validate', {
+            const res = await fetch('https://vite-sql-2025.onrender.com/api/validate', {
                
                 method: 'POST',
                 headers: {
